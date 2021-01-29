@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/clients/clients.css' %}">
+
+<div class="card-group">
+    <div class="container">
+        <h2>Clients Served</h2>
+        <br>
+        <br>
+        <div class="row">
+            {% for client in clients %}
+                <div class="col">
+                <div class="card" style="...">
+                    <img src="{{ client.logo }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ client.title }}</h5>
+                        <p class="card-text">Category: {{ client.category }}</p>
+                        <a  href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+{% endblock %}
+
