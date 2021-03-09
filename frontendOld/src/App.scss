@@ -1,0 +1,8 @@
+@import 'settings';
+@import '~foundation-sites/scss/foundation';
+
+.App {
+  text-align: center;
+  @include xy-grid-container;
+}
+
